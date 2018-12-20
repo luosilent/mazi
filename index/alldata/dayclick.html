@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../static/js/echarts.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+</head>
+<body>
+<div id="main" style="width: 70rem;height:35rem;margin-top: 3.75rem;" ></div>
+
+</body>
+</html>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main'));
+    option = {
+        title : {
+            text: '起点和创世的日点击数',
+            subtext: '最近10天'
+        },
+        tooltip : {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['起点','创世']
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        xAxis : [
+            {
+                type : 'category',
+                data : ['12-15','12-16','12-17','12-18','12-19','12-20','12-21','12-22','12-23','12-24']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'起点',
+                type:'bar',
+                data:[15, 25, 37, 40, 88, 103, 99, 100, 95, 88],
+                markPoint : {
+                    data : [
+                        {type : 'max', name: '最大值'},
+                        {type : 'min', name: '最小值'}
+                    ]
+                },
+                markLine : {
+                    data : [
+                        {type : 'average', name: '平均值'}
+                    ]
+                }
+            },
+            {
+                name:'创世',
+                type:'bar',
+                data:[5, 35, 47, 40, 68, 73, 99, 100, 120, 122],
+                markPoint : {
+                    data : [
+                        {type : 'max', name: '最大值'},
+                        {type : 'min', name: '最小值'}
+                    ]
+                },
+                markLine : {
+                    data : [
+                        {type : 'average', name : '平均值'}
+                    ]
+                }
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+
+
+</script>

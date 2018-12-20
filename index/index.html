@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta itemprop="name" content="XX写作-纯粹的码字工具">
+  <meta name="keywords" content="XX,写作,码字,创作,小说写作,写小说,云端存储,云同步,多平台同步,历史版本,作家助手,小黑屋,码字精灵,云笔记" />
+  <meta name="description" content="XX写作，十分实用的作家写作工具,提供多平台进行写作码字,多平台同步,XX写作,是一款专注于网络写手、小说作者的跨平台写作码字工具。登陆后，你可以体验更多简洁实用的功能，提供云同步、章节历史版本、一键起名、小黑屋锁定、敏感词检测、单独设定管理大纲等好用的写作码字功能，界面简洁清晰，所有写作内容在多平台上无缝同步创作。" />
+  <meta name="author" content="XX科技" />
+  <meta name="robots" content="index,follow" />
+  <meta name="google" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+  <meta name="verify" content="index,follow" />
+  <meta name="description" itemprop="description" content="提供云同步、章节历史版本、一键起名、小黑屋锁定、敏感词检测、单独设定管理大纲等好用的写作码字功能，界面简洁清晰，所有写作内容在多平台上无缝同步创作。" />
+  <meta itemprop="image" content="/static/images/mz-logo.png" />
+  <title>XX写作- 专为作者服务的平台</title>
+  <link rel="stylesheet" href="static/css/public.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <!-- <link rel="stylesheet" href="static/css/swiper.min.css"> -->
+  <script type="text/javascript" src="static/js/maintain.js"></script>
+  <script>
+
+    //if  (new Date() < new Date(2018, 7, 7, 20)) {
+    //  location.href = location.origin + '/countdown/index.html';
+    //}
+
+    // 移动端跳转
+    var OS = function() {
+      var a = navigator.userAgent,
+          b = /(?:Android)/.test(a),
+          d = /(?:Firefox)/.test(a),
+          e = /(?:Mobile)/.test(a),
+          f = b && e,
+          g = b && !f,
+          c = /(?:iPad.*OS)/.test(a),
+          h = !c && /(?:iPhone\sOS)/.test(a),
+          k = c || g || /(?:PlayBook)/.test(a) || d && /(?:Tablet)/.test(a),
+          a = !k && (b || h || /(?:(webOS|hpwOS)[\s\/]|BlackBerry.*Version\/|BB10.*Version\/|CriOS\/)/.test(a) || d && e);
+      return {
+        android: b,
+        androidPad: g,
+        androidPhone: f,
+        ipad: c,
+        iphone: h,
+        tablet: k,
+        phone: a
+      }
+    }();
+
+    if (OS.phone || OS.ipad) {
+      location.href = location.origin + '/index.html' + location.search;
+    }
+  </script>
+  <style type="text/css">
+    .outlink{
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="video-bg">
+    <img src="static/picture/index-bg1.png" alt="" class="bg-img">
+    <div class="banner1-info new">
+      <div class="wording">
+        <div class="move-logo"></div>
+        <div class="move-title" style="color: black">主要特色功能介绍</div>
+        <div class="move-desc" style="color: black">支持xx xxx等码字功能</div>
+        <div class="move-down">
+          <button style="background-color: lightskyblue;border-radius: 40px;">
+          <a class="move-down-a" href="./download.html" >
+            <span>立即下载</span>
+            <span>立即下载</span>
+            <span>立即下载</span>
+          </a>
+          </button>
+        </div>
+      </div>
+      <!-- poster="./img/mob-poster.png" muted preload muted preload poster="./img/pc-poster.png"-->
+      <div class="video-mob">
+          <!-- <video src="./video/mobiledemo-2.mp4" id="mob" muted preload></video> -->
+      </div>
+      <div class="video-pc" id="video-pc">
+          <video  id="pc" muted preload></video>
+      </div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="h-inner">
+      <h1 class="logo">
+        <a href="./index.html"></a>
+        <!-- <img src="static/images/logo_white.png" alt="TIM"> -->
+      </h1>
+      <div class="nav">
+        <ul class="nav-ul">
+          <li class="nav-item"><a href="./index.html" class="active">首页</a></li>
+          <li class="nav-item"><a href="./download.html">下载</a></li>
+          <li class="nav-item"><a style="cursor: pointer" href="data.html" >数据分析</a></li>
+          <li class="nav-item"><a style="cursor: pointer" href="edit/editor.html" >在线码字</a></li>
+          <li class="nav-item"><a href="./support.html">支持</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="docs-link">
+      <a href="">登录 / 注册 </a>
+    </div>
+  </div>
+  <div class="function">
+    <div style="text-align: center;font-size: 5rem;color: red">以下是图表功能介绍，最好是动图</div>
+    <div class="func-inner clear">
+      <div class="func-item">
+        <div class="func-logo1"></div>
+        <div class="func-title">xxxxxxxxxx</div>
+        <div class="func-desc">xxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+      <div class="func-item">
+        <div class="func-logo2"></div>
+        <div class="func-title">xxxxxxxxxx</div>
+        <div class="func-desc">xxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+      <div class="func-item">
+        <div class="func-logo3"></div>
+        <div class="func-title">xxxxxxxxxx</div>
+        <div class="func-desc">xxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+        <div class="func-item">
+        <div class="func-logo4"></div>
+        <div class="func-title">xxxxxxxxxx</div>
+        <div class="func-desc">xxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+    </div>
+  </div>
+  <div class="doc bottom-right" style="position:relative">
+    <div class="doc-inner">
+      <!-- <div class="store-logo"></div> -->
+      <div class="second-title">xxxxxxxxxx</div>
+      <div class="second-desc">xxxxxxxxxxxxxxxxxxxx</div>
+    </div>
+    <div class="doc-bg doc1">
+      <img src="static/picture/yun.png" alt="" id="yun">
+    </div>
+  </div>
+  <div class="doc top-right" style="position:relative;">
+    <div class="doc-inner">
+      <div class="second-title"><a style="cursor: default" class="outlink" >xxxxxxxxxx</a></div>
+      <div class="second-desc">xxxxxxxxxxxxxxxxxxxx</div>
+    </div>
+    <div class="doc-bg doc2">
+      <img src="static/picture/zaixian.png" alt="" id="document">
+      <!-- <video src="video/zaixianwendang.mov" id="zaixianwendang"></video> -->
+    </div>
+  </div>
+  <div class="doc bottom-right" style="position:relative;">
+    <div class="doc-inner">
+      <!-- <div class="message-logo"></div> -->
+      <div class="second-title">xxxxxxxxxx</div>
+      <div class="second-desc">xxxxxxxxxxxxxxxxxxxx</div>
+    </div>
+    <div class="doc-bg doc3">
+      <!-- <div class="date-mobile-msg"></div>
+      <div class="date-pc-msg"></div> -->
+      <img src="static/picture/xiaoxi.png" alt="" id="msg">
+    </div>
+  </div>
+
+  <div class="doc top-right" style="position:relative;">
+    <div class="doc-inner">
+      <!-- <div class="calender-logo"></div> -->
+      <div class="second-title">xxxxxxxxxx</div>
+      <div class="second-desc">xxxxxxxxxxxxxxxxxxxx</div>
+    </div>
+    <div class="doc-bg doc4">
+      <!-- <div class="date-mobile"></div>
+      <div class="date-pc"></div> -->
+      <img src="static/picture/richeng.png" alt="" id="date-manage">
+    </div>
+  </div>
+  <div class="more" style="position:relative;">
+    <div class="more-inner clear">
+      <div class="more-item">
+        <div class="item-logo2"></div>
+        <div class="item-title">xxxxxxxxxx</div>
+        <div class="item-desc">xxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+      <div class="more-item">
+        <div class="item-logo8"></div>
+        <div class="item-title">xxxxxxxxxx</div>
+        <div class="item-desc">xxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+      <div class="more-item">
+        <div class="item-logo7"></div>
+        <div class="item-title">xxxxxxxxxx</div>
+        <div class="item-desc">xxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+      <div class="more-item">
+        <div class="item-logo6"></div>
+        <div class="item-title">xxxxxxxxxx</div>
+        <div class="item-desc">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+      <div class="more-item">
+        <div class="item-logo3"></div>
+        <div class="item-title">xxxxxxxxxx</div>
+        <div class="item-desc">xxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+      <div class="more-item">
+        <div class="item-logo5"></div>
+        <div class="item-title">xxxxxxxxxx</div>
+        <div class="item-desc">xxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+      <div class="more-item">
+        <div class="item-logo4"></div>
+        <div class="item-title">xxxxxxxxxx</div>
+        <div class="item-desc">xxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+      <div class="more-item">
+        <div class="item-logo1"></div>
+        <div class="item-title">xxxxxxxxxx</div>
+        <div class="item-desc">xxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>
+      <span class="useradjest">
+        <a href="about.html">关于我们</a>
+      </span>
+      <span class="useradjest">
+        <a href="https://www.baidu.com/">用户协议</a>
+      </span>
+      <span>意见反馈：qq</span>
+    </p>
+    <p class="copy-right">
+      Copyright © 2018-<script>document.write(new Date().getFullYear())</script>XX科技有限公司/XX写作/
+    </p>
+  </div>
+  <script src="static/js/jquery.min.js"></script>
+  <!-- <script src="static/js/bj-report-tryjs.min.js"></script> -->
+  <!-- <script src="static/js/tcss.ping.https.js"></script> -->
+  <!-- <script src="static/js/swiper-3.4.2.jquery.min.js"></script> -->
+  <!-- <script src="static/js/tvp.player_v2_zepto.js"></script> -->
+  <!-- <script src="static/js/tvp.player_v2_zepto.js"></script> -->
+  <script>
+    var dateManage = $('#date-manage').offset().top
+    var msg = $('#msg').offset().top
+    var yun = $('#yun').offset().top
+    var pdocument = $('#document').offset().top
+    var windowHeight = $(window).height()
+        // 页面滚动触发播放事件
+    function pageScroll() {
+      var documentScrollTop = $(document).scrollTop()
+
+      if (documentScrollTop > 10) {
+          $('.header').addClass('scrollTop')
+      } else {
+          $('.header').removeClass('scrollTop')
+      }
+      if (documentScrollTop > pdocument - windowHeight / 2 - 300) {
+          $('#document').addClass('moveUp')
+      }
+      if (documentScrollTop > dateManage - windowHeight / 2 - 300) {
+          $('#date-manage').addClass('moveUp')
+      }
+      if (documentScrollTop > msg - windowHeight / 2 - 300) {
+          $('#msg').addClass('moveUp')
+      }
+      if (documentScrollTop > yun - windowHeight / 2 - 300) {
+          $('#yun').addClass('moveUp')
+      }
+    }
+    $(document).scroll(pageScroll)
+    initVideoPosition()
+
+    function initVideoPosition() {
+      var w = 2560,
+          h = 997,
+          ml = 1298,
+          mb = 126,
+          mw = 180,
+          mh = 319,
+          pl = 1519,
+          pb = 264,
+          pw = 626,
+          ph = 501,
+          nw = (document.body.clientWidth).toFixed(9),
+          nh = (nw * h / w).toFixed(9),
+          mlp = (ml / w).toFixed(9),
+          mbp = (mb / h).toFixed(9),
+          mwp = (mw / w).toFixed(9),
+          mhp = (mh / h).toFixed(9),
+          mlnpx = nw * mlp,
+          mbnpx = nh * mbp,
+          mwnpx = nw * mwp,
+          mhnpx = nh * mhp,
+
+
+          plp = (pl / w).toFixed(9),
+          pbp = (pb / h).toFixed(9),
+          pwp = (pw / w).toFixed(9),
+          php = (ph / h).toFixed(9),
+          plnpx = nw * plp,
+          pbnpx = nh * pbp,
+          pwnpx = nw * pwp,
+          phnpx = nh * php
+      $('.video-mob').css({
+        bottom: mbnpx + 'px',
+        left: mlnpx + 'px',
+        width: mwnpx + 'px',
+        height: mhnpx + 'px'
+      })
+      $('.video-pc').css({
+        bottom: pbnpx + 'px',
+        left: plnpx + 'px',
+        width: pwnpx + 'px',
+        height: phnpx + 'px'
+      })
+    }
+
+    setTimeout(function() {
+      // document.getElementById('mob').play()
+      document.getElementById('pc').play()
+    }, 2000)
+
+    $('.wording').addClass('show')
+    window.onresize = function() {
+        initVideoPosition()
+    }
+    // document.getElementById('mob').onended = function() {
+    //     var _this = this;
+    //     var ender = setTimeout(function() {
+    //         _this.play()
+    //         clearTimeout(ender)
+    //     }, 2000)
+    // }
+    document.getElementById('pc').onended = function() {
+      var _this = this;
+      var ender = setTimeout(function() {
+          _this.play()
+          clearTimeout(ender)
+      }, 2000)
+    }
+    document.onmouseenter = function() {
+        return false;
+    }
+    document.onmousemove = function() {
+        return false;
+    }
+    document.oncontextmenu = function() {
+        return false;
+    }
+  </script>
+</body>
+</html>

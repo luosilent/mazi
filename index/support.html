@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="XX科技" />
+  <meta name="robots" content="index,follow" />
+  <meta name="google" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+  <meta name="verify" content="index,follow" />
+  <meta name="keywords" content="XX,写作,码字,创作,小说写作,写小说,云端存储,云同步,多平台同步,历史版本,作家助手,小黑屋,码字精灵,云笔记" />
+  <meta name="description" content="XX写作，十分实用的作家写作工具,提供多平台进行写作码字,多平台同步,XX写作,是一款专注于网络写手、小说作者的跨平台写作码字工具。登陆后，你可以体验更多简洁实用的功能，提供云同步、章节历史版本、一键起名、小黑屋锁定、敏感词检测、单独设定管理大纲等好用的写作码字功能，界面简洁清晰，所有写作内容在多平台上无缝同步创作。" />
+  <meta itemprop="name" content="XX写作-纯粹的码字工具">
+  <!--分享卡标题预埋meta-->
+  <meta name="description" itemprop="description" content="提供云同步、章节历史版本、一键起名、小黑屋锁定、敏感词检测、单独设定管理大纲等好用的写作码字功能，界面简洁清晰，所有写作内容在多平台上无缝同步创作。" />
+  <!--分享卡描述预埋meta-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js"></script>
+  <title>XX写作-支持</title>
+  <link rel="stylesheet" href="static/css/public.css">
+  <link rel="stylesheet" href="static/css/support.css">
+  <script type="text/javascript" src="static/js/maintain.js"></script>
+  <script>
+    // 移动端跳转
+    var OS = function() {
+      var a = navigator.userAgent,
+          b = /(?:Android)/.test(a),
+          d = /(?:Firefox)/.test(a),
+          e = /(?:Mobile)/.test(a),
+          f = b && e,
+          g = b && !f,
+          c = /(?:iPad.*OS)/.test(a),
+          h = !c && /(?:iPhone\sOS)/.test(a),
+          k = c || g || /(?:PlayBook)/.test(a) || d && /(?:Tablet)/.test(a),
+          a = !k && (b || h || /(?:(webOS|hpwOS)[\s\/]|BlackBerry.*Version\/|BB10.*Version\/|CriOS\/)/.test(a) || d && e);
+      return {
+        android: b,
+        androidPad: g,
+        androidPhone: f,
+        ipad: c,
+        iphone: h,
+        tablet: k,
+        phone: a
+      }
+    }();
+
+    if (OS.phone || OS.ipad) {
+      location.href = location.origin + '/index.html' + location.search;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="header scrollTop">
+    <div class="h-inner">
+      <h1 class="logo">
+        <a href="./index.html"></a>
+      </h1>
+      <div class="nav">
+        <ul class="nav-ul">
+          <li class="nav-item"><a href="./index.html">首页</a></li>
+          <li class="nav-item"><a href="./download.html">下载</a></li>
+           <li class="nav-item"><a  href="data.html">数据分析</a></li>
+           <li class="nav-item"><a href="edit/editor.html" >在线码字</a></li>
+          <li class="nav-item"><a href="support.html" class="active">支持</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="docs-link">
+      <a href="">登录 / 注册 </a>
+    </div>
+  </div>
+  <div class="support-list clear">
+    <div class="s-list-item">
+      <a href="#logs" class="target-a">
+        <div class="item1 hover-item"></div>
+        <div class="s-desc">更新日志</div>
+      </a>
+    </div>
+    <div class="s-list-item">
+      <a href="#questions" class="target-a">
+        <div class="item2 hover-item"></div>
+        <div class="s-desc">常见问题</div>
+      </a>
+    </div>
+
+    <div class="s-list-item">
+      <a href="" target="" class="target-a">
+        <div class="item4 hover-item"></div>
+        <div class="s-desc">反馈意见</div>
+      </a>
+    </div>
+  </div>
+  <div class="l-content" id="logs">
+    <div class="update-log">更新日志</div>
+    <div class="version-list">
+      <div class="version-item newest">
+      </div>
+      <div class="history-version">
+        <div class="history-version-title">历史版本</div>
+      </div>
+      <div id="history-version-list"></div>
+    </div>
+  </div>
+  <div class="questions" id="questions">
+    <p>
+      cccccc。<a href="" target=""></a>
+    </p>
+  </div>
+  <div class="footer">
+    <p>
+      <span class="useradjest">
+        <a href="about.html">关于我们</a>
+      </span>
+      <span class="useradjest">
+        <a href="">用户协议</a>
+      </span>
+      <span>意见反馈：</span>
+    </p>
+    <p class="copy-right">
+      Copyright © 2018-<script>document.write(new Date().getFullYear())</script>XX科技有限公司/XX写作/、、
+    </p>
+  </div>
+  <script src="static/js/jquery.min.js"></script>
+  <!-- <script src="static/js/question.js"> </script> -->
+  <script src="static/js/update.js"></script>
+  <script>
+    setVersionInfo('support');
+  </script>
+</body>

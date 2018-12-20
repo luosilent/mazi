@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/public.css">
+    <link rel="stylesheet" href="static/css/support.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/layui.mobile.css">
+    <script src="layui/layui.all.js"></script>
+    <script src="static/js/echarts.min.js"></script>
+    <script src="static/js/jquery.min.js"></script>
+    <title>XX写作-数据分析</title>
+</head>
+<div class="header scrollTop">
+    <div class="h-inner">
+        <h1 class="logo">
+            <a href="./index.html"></a>
+            <!-- <img src="static/images/logo_white.png" alt="TIM"> -->
+        </h1>
+        <div class="nav">
+            <ul class="nav-ul">
+                <li class="nav-item"><a href="./index.html">首页</a></li>
+                <li class="nav-item"><a href="./download.html">下载</a></li>
+                <li class="nav-item"><a style="cursor: pointer" href="data.html" class="active" >数据分析</a></li>
+                <li class="nav-item"><a style="cursor: pointer" href="edit/editor.html">在线码字</a></li>
+                <li class="nav-item"><a href="./support.html">支持</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="docs-link">
+        <a href="">登录 / 注册 </a>
+    </div>
+</div>
+<body>
+<div style="margin-top: 3.75rem"></div>
+<div class="layui-tab layui-tab-card site-demo-button" style="position: relative;">
+    <ul class="layui-nav layui-nav-tree layui-nav-side">
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;">点击统计</a>
+            <dl class="layui-nav-child">
+                <dd>
+                    <a data-url="alldata/dayclick" data-id="1" data-title="日点击数" href="#" class="site-demo-active" data-type="tabAdd">日点击数</a>
+                </dd>
+                <dd>
+                    <a  data-url="alldata/weekclick" data-id="2" data-title="周点击数" class="site-demo-active" data-type="tabAdd">周点击数</a>
+                </dd>
+                <dd>
+                    <a data-url="alldata/monthclick"  data-id="3" data-title="月点击数" class="site-demo-active" data-type="tabAdd">月点击数</a>
+                </dd>
+
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">推荐统计</a>
+            <dl class="layui-nav-child">
+                <dd>
+                    <a data-url="alldata/dayrem"  data-id="4" data-title="日推荐数" class="site-demo-active" data-type="tabAdd">日推荐数</a>
+                </dd>
+                <dd>
+                    <a data-url="alldata/weekrem"  data-id="5" data-title="周推荐数" class="site-demo-active" data-type="tabAdd">周推荐数</a>
+                </dd>
+                <dd>
+                    <a data-url="alldata/monthrem"  data-id="6" data-title="月推荐数"  class="site-demo-active" data-type="tabAdd">月推荐数</a>
+                </dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a data-url="alldata/daydy" data-title="订阅数" data-id="7" class="site-demo-active" data-type="tabAdd">订阅数</a>
+        </li>
+        <li class="layui-nav-item">
+            <a data-url="alldata/allcollect" data-title="总收藏" data-id="8" class="site-demo-active" data-type="tabAdd">总收藏</a>
+        </li>
+        <li class="layui-nav-item">
+            <a data-url="alldata/zishu" data-title="字数统计" data-id="9" class="site-demo-active" data-type="tabAdd">字数统计</a>
+        </li>
+        <li class="layui-nav-item">
+            <a data-url="alldata/datapk" data-title="作品PK" data-id="10" class="site-demo-active" data-type="tabAdd">作品PK</a>
+        </li>
+    </ul>
+
+    <div class="layui-tab" lay-filter="demo" lay-allowclose="true" style="margin-left: 200px;">
+        <ul class="layui-tab-title">
+        </ul>
+        <ul class="rightmenu" style="display: none;position: absolute;">
+            <li data-type="closethis">关闭当前</li>
+            <li data-type="closeall">关闭所有</li>
+        </ul>
+        <div class="layui-tab-content">
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+<script src="static/js/lay.js"></script>
