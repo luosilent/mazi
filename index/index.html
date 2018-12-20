@@ -26,32 +26,6 @@
     //  location.href = location.origin + '/countdown/index.html';
     //}
 
-    // 移动端跳转
-    var OS = function() {
-      var a = navigator.userAgent,
-          b = /(?:Android)/.test(a),
-          d = /(?:Firefox)/.test(a),
-          e = /(?:Mobile)/.test(a),
-          f = b && e,
-          g = b && !f,
-          c = /(?:iPad.*OS)/.test(a),
-          h = !c && /(?:iPhone\sOS)/.test(a),
-          k = c || g || /(?:PlayBook)/.test(a) || d && /(?:Tablet)/.test(a),
-          a = !k && (b || h || /(?:(webOS|hpwOS)[\s\/]|BlackBerry.*Version\/|BB10.*Version\/|CriOS\/)/.test(a) || d && e);
-      return {
-        android: b,
-        androidPad: g,
-        androidPhone: f,
-        ipad: c,
-        iphone: h,
-        tablet: k,
-        phone: a
-      }
-    }();
-
-    if (OS.phone || OS.ipad) {
-      location.href = location.origin + '/index.html' + location.search;
-    }
   </script>
   <style type="text/css">
     .outlink{

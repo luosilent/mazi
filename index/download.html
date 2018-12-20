@@ -25,90 +25,13 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js"></script>
     <script src="https://browser.sentry-cdn.com/4.3.4/bundle.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        (function () {
-            // 错误收集
-            Sentry.init({dsn: 'https://601bd6eb36f840e59552d98619b70cb3@sentry.io/1331196'});
-            // 数据收集
-            window.zhuge = window.zhuge || [];
-            window.zhuge.methods = "_init identify track getDid getSid getKey setSuperProperty setUserProperties setPlatform".split(" ");
-            window.zhuge.factory = function (b) {
-                return function () {
-                    var a = Array.prototype.slice.call(arguments);
-                    a.unshift(b);
-                    window.zhuge.push(a);
-                    return window.zhuge;
-                }
-            };
-            for (var i = 0; i < window.zhuge.methods.length; i++) {
-                var key = window.zhuge.methods[i];
-                window.zhuge[key] = window.zhuge.factory(key);
-            }
-            window.zhuge.load = function (b, x) {
-                if (!document.getElementById("zhuge-js")) {
-                    var a = document.createElement("script");
-                    var verDate = new Date();
-                    var verStr = verDate.getFullYear().toString() + verDate.getMonth().toString() + verDate.getDate().toString();
 
-                    a.type = "text/javascript";
-                    a.id = "zhuge-js";
-                    a.async = !0;
-                    a.src = (location.protocol == 'http:' ? "http://sdk.zhugeio.com/zhuge.min.js?v=" : 'https://zgsdk.zhugeio.com/zhuge.min.js?v=') + verStr;
-                    a.onerror = function () {
-                        window.zhuge.identify = window.zhuge.track = function (ename, props, callback) {
-                            if (callback && Object.prototype.toString.call(callback) === '[object Function]') {
-                                callback();
-                            } else if (Object.prototype.toString.call(props) === '[object Function]') {
-                                props();
-                            }
-                        };
-                    };
-                    var c = document.getElementsByTagName("script")[0];
-                    c.parentNode.insertBefore(a, c);
-                    window.zhuge._init(b, x)
-                }
-            };
-            window.zhuge.load('6137c7e09e554d41912b6f8e5b9ad8ec', { //配置应用的AppKey
-                superProperty: { //全局的事件属性(选填)
-                    '应用名称': '诸葛io'
-                },
-                autoTrack: false,
-                //启用全埋点采集（选填，默认false）
-                singlePage: false //是否是单页面应用（SPA），启用autoTrack后生效（选填，默认false）
-            });
-        })();
     </script>
     <title>XX写作-下载</title>
     <link rel="stylesheet" href="static/css/public.css">
     <link rel="stylesheet" href="static/css/download.css">
     <script type="text/javascript" src="static/js/maintain.js"></script>
-    <script>
-        // 移动端跳转
-        var OS = function () {
-            var a = navigator.userAgent,
-                b = /(?:Android)/.test(a),
-                d = /(?:Firefox)/.test(a),
-                e = /(?:Mobile)/.test(a),
-                f = b && e,
-                g = b && !f,
-                c = /(?:iPad.*OS)/.test(a),
-                h = !c && /(?:iPhone\sOS)/.test(a),
-                k = c || g || /(?:PlayBook)/.test(a) || d && /(?:Tablet)/.test(a),
-                a = !k && (b || h || /(?:(webOS|hpwOS)[\s\/]|BlackBerry.*Version\/|BB10.*Version\/|CriOS\/)/.test(a) || d && e);
-            return {
-                android: b,
-                androidPad: g,
-                androidPhone: f,
-                ipad: c,
-                iphone: h,
-                tablet: k,
-                phone: a
-            }
-        }();
 
-        if (OS.phone || OS.ipad) {
-            location.href = location.origin + '/index.html' + location.search;
-        }
-    </script>
 </head>
 
 <body>
